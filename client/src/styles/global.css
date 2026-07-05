@@ -305,11 +305,13 @@ button { font-family: inherit; cursor: pointer; }
 }
 
 /* කම්පන sound ripple — swells out from the vinyl centre and fades.
-   `translate` keeps it centred while framer animates scale. */
+   Centred with negative margins (not translate/transform) so the
+   framer scale animation can never knock it off-centre. */
 .grooves .ripple {
   position: absolute; left: var(--gx, 80%); top: var(--gy, 51%);
-  translate: -50% -50%;
   width: 40vmin; height: 40vmin;
+  margin-left: -20vmin; margin-top: -20vmin;
+  translate: none;
   border: 1px solid rgba(201,162,39,.55);
   border-radius: 50%;
   transform: none;
