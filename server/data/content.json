@@ -1,0 +1,97 @@
+{
+  "songs": [
+    {
+      "slug": "welithala-athare",
+      "titleSi": "වැලිතල අතරේ",
+      "titleEn": "Welithala Athare",
+      "year": "1978",
+      "tone": 1,
+      "note": "PLACEHOLDER — verify title/year against the real discography"
+    },
+    {
+      "slug": "kampana-live",
+      "titleSi": "කම්පන · සජීවී",
+      "titleEn": "Kampana — Live",
+      "year": "1991",
+      "tone": 2,
+      "note": "PLACEHOLDER — verify title/year against the real discography"
+    },
+    {
+      "slug": "atha-kandukara",
+      "titleSi": "ඈත කඳුකර",
+      "titleEn": "Atha Kandukara",
+      "year": "1983",
+      "tone": 3,
+      "note": "PLACEHOLDER — verify title/year against the real discography"
+    },
+    {
+      "slug": "gee-ekathuwa",
+      "titleSi": "ගී එකතුව",
+      "titleEn": "Collected Songs",
+      "year": "2003",
+      "tone": 4,
+      "note": "PLACEHOLDER — verify title/year against the real discography"
+    },
+    {
+      "slug": "sample-5",
+      "titleSi": "ගීතය පහ",
+      "titleEn": "Song Five",
+      "year": "1985",
+      "tone": 1,
+      "note": "PLACEHOLDER"
+    },
+    {
+      "slug": "sample-6",
+      "titleSi": "ගීතය හය",
+      "titleEn": "Song Six",
+      "year": "1988",
+      "tone": 3,
+      "note": "PLACEHOLDER"
+    }
+  ],
+  "albums": [
+    { "slug": "welithala-athare", "titleSi": "වැලිතල අතරේ", "titleEn": "STUDIO ALBUM", "year": "1978", "tone": 1 },
+    { "slug": "kampana-live", "titleSi": "කම්පන · සජීවී", "titleEn": "KAMPANA — LIVE", "year": "1991", "tone": 2 },
+    { "slug": "atha-kandukara", "titleSi": "ඈත කඳුකර", "titleEn": "STUDIO ALBUM", "year": "1983", "tone": 3 },
+    { "slug": "gee-ekathuwa", "titleSi": "ගී එකතුව", "titleEn": "COLLECTED SONGS", "year": "2003", "tone": 4 }
+  ],
+  "timeline": [
+    { "year": "1945", "titleSi": "උපත", "titleEn": "BORN IN SOUTHERN SRI LANKA" },
+    { "year": "1960s", "titleSi": "ගුවන්විදුලියට", "titleEn": "TRAINED IN INDIA · JOINS RADIO CEYLON" },
+    { "year": "1990s", "titleSi": "කම්පන යුගය", "titleEn": "THE KAMPANA CONCERTS SHAKE THE NATION" },
+    { "year": "2003", "titleSi": "සමුගැනීම", "titleEn": "FAREWELL — THE VOICE BECOMES ETERNAL" }
+  ],
+  "gallery": [
+    { "captionEn": "ON STAGE · 1992", "tone": 1, "h": 340 },
+    { "captionEn": "SLBC STUDIO", "tone": 2, "h": 300 },
+    { "captionEn": "WITH THE PEOPLE", "tone": 3, "h": 360 },
+    { "captionEn": "KAMPANA NIGHT", "tone": 4, "h": 310 },
+    { "captionEn": "REHEARSAL", "tone": 2, "h": 320 },
+    { "captionEn": "RADIO DAYS", "tone": 1, "h": 350 },
+    { "captionEn": "THE LAST TOUR", "tone": 4, "h": 300 },
+    { "captionEn": "FAMILY ARCHIVE", "tone": 3, "h": 330 }
+  ],
+  "concerts": [
+    {
+      "titleSi": "කම්පන",
+      "titleEn": "KAMPANA",
+      "descSi": "වේදිකාව මත තනිවම — ගිටාරය, හඬ, සත්‍යය. ලාංකීය ප්‍රසංග ඉතිහාසයේ සුවිශේෂී සන්ධිස්ථානය.",
+      "descEn": "Alone on stage — a guitar, a voice, the truth. A landmark in Sri Lankan concert history.",
+      "era": "1990s"
+    },
+    {
+      "titleSi": "ගුවන්විදුලි යුගය",
+      "titleEn": "THE RADIO ERA",
+      "descSi": "ශ්‍රී ලංකා ගුවන්විදුලි සංස්ථාවේ සංගීත අධ්‍යක්ෂවරයෙකු ලෙස දශක ගණනාවක සේවය.",
+      "descEn": "Decades of service as a music director at the Sri Lanka Broadcasting Corporation.",
+      "era": "1960s — 1990s"
+    },
+    {
+      "titleSi": "අවසන් සංචාරය",
+      "titleEn": "THE FINAL TOUR",
+      "descSi": "2003 — ඕස්ට්‍රේලියානු සංචාරයේදී ඔහු අප අතරින් සමුගත්තේය. හඬ සදාකාලික විය.",
+      "descEn": "2003 — he passed away during a tour of Australia. The voice became eternal.",
+      "era": "2003"
+    }
+  ]
+}
