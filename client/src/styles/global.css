@@ -850,7 +850,10 @@ button { font-family: inherit; cursor: pointer; }
     scrollbar-width: none;
   }
   .music__row::-webkit-scrollbar { display: none; }
-  .album { flex: 0 0 200px; scroll-snap-align: start; }
+  /* the direct children are the Reveal wrapper divs, not .album —
+     size those, and let the card fill its wrapper */
+  .music__row > * { flex: 0 0 200px; scroll-snap-align: start; }
+  .album { width: 100%; }
   .album__meta h3 { font-size: 17px; }
 
   .song { padding: 16px 18px; gap: 14px; flex-wrap: wrap; }

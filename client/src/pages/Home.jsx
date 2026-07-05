@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Page, Reveal, fadeUp, stagger } from "../components/motion.jsx";
@@ -15,6 +15,20 @@ const BARS = [
   22, 34, 48, 64, 84, 104, 124, 96, 74, 56, 40, 28, 18, 12,
 ];
 
+function useIsDesktop() {
+  const [desktop, setDesktop] = useState(
+    () => typeof window === "undefined" || window.matchMedia("(min-width: 769px)").matches
+  );
+  useEffect(() => {
+    const mq = window.matchMedia("(min-width: 769px)");
+    const update = () => setDesktop(mq.matches);
+    update();
+    mq.addEventListener("change", update);
+    return () => mq.removeEventListener("change", update);
+  }, []);
+  return desktop;
+}
+
 export default function Home() {
   const albums = useApi("albums");
   const timeline = useApi("timeline");
@@ -22,10 +36,15 @@ export default function Home() {
   const songs = useApi("songs");
   const [listenSong, setListenSong] = useState(null);
 
-  // Parallax — transform-only, GPU composited
+  // Parallax — transform-only, GPU composited.
+  // Desktop only: on mobile the portrait sits in normal flow above the
+  // text, so drifting them towards each other makes them collide.
+  const isDesktop = useIsDesktop();
   const { scrollY } = useScroll();
-  const portraitY = useTransform(scrollY, [0, 900], [0, 130]);
-  const contentY = useTransform(scrollY, [0, 900], [0, -70]);
+  const portraitYRaw = useTransform(scrollY, [0, 900], [0, 130]);
+  const contentYRaw = useTransform(scrollY, [0, 900], [0, -70]);
+  const portraitY = isDesktop ? portraitYRaw : 0;
+  const contentY = isDesktop ? contentYRaw : 0;
 
   return (
     <Page>
