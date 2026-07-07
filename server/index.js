@@ -75,6 +75,7 @@ app.get("/api/albums", async (_req, res) => {
 });
 
 app.get("/api/timeline", (_req, res) => res.json(fallback.timeline));
+app.get("/api/catalog", (_req, res) => res.json(fallback.catalog));
 app.get("/api/gallery", (_req, res) => res.json(fallback.gallery));
 app.get("/api/concerts", (_req, res) => res.json(fallback.concerts));
 

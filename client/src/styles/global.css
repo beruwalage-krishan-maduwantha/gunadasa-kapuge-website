@@ -545,6 +545,72 @@ button { font-family: inherit; cursor: pointer; }
   border-bottom: 6px solid transparent;
 }
 
+/* ---------- full catalogue (music page) ---------- */
+
+.catalog-search { max-width: 480px; margin: 0 auto 44px; }
+.catalog-search input {
+  width: 100%;
+  padding: 16px 22px;
+  background: #20170e;
+  border: 1px solid rgba(201,162,39,.3);
+  border-radius: 2px;
+  font: 400 17px/1.4 var(--f-si);
+  color: var(--ivory);
+  outline: none;
+  text-align: center;
+  transition: border-color .25s ease;
+}
+.catalog-search input:focus { border-color: var(--gold); }
+.catalog-search input::placeholder { color: var(--khaki); letter-spacing: 1px; }
+
+.catalog {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 26px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.catalog__item {
+  display: flex; align-items: center; gap: 14px;
+  padding: 13px 18px;
+  background: #20170e;
+  border: 1px solid rgba(201,162,39,.12);
+  border-radius: 3px;
+  text-align: left;
+  transition: border-color .25s ease, transform .25s ease;
+}
+.catalog__item:hover { border-color: rgba(201,162,39,.5); transform: translateX(5px); }
+.catalog__item b {
+  font: 400 11px/1 var(--f-en);
+  color: rgba(201,162,39,.55);
+  width: 30px; flex-shrink: 0;
+}
+.catalog__item span {
+  flex: 1;
+  font: 500 17px/1.35 var(--f-si);
+  color: var(--ivory);
+}
+.catalog__item i {
+  flex-shrink: 0;
+  border-left: 9px solid rgba(201,162,39,.65);
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+}
+.catalog__empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 40px 0;
+  font: 400 18px/1.5 var(--f-si);
+  color: var(--khaki);
+}
+.catalog__credit {
+  margin-top: 44px;
+  text-align: center;
+  font: 300 8.5px/1 var(--f-ui);
+  letter-spacing: 2.5px;
+  color: rgba(156,139,110,.55);
+}
+
 /* ---------- listen modal (lnk.to style) ---------- */
 
 .lmodal__backdrop {
@@ -858,6 +924,8 @@ button { font-family: inherit; cursor: pointer; }
   .music__row > * { flex: 0 0 200px; scroll-snap-align: start; }
   .album { width: 100%; }
   .album__meta h3 { font-size: 17px; }
+
+  .catalog { grid-template-columns: 1fr; }
 
   .song { padding: 16px 18px; gap: 14px; flex-wrap: wrap; }
   .song__num { display: none; }

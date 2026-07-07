@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import { Page, PageHead, Reveal } from "../components/motion.jsx";
 import ListenModal from "../components/ListenModal.jsx";
@@ -7,7 +7,14 @@ import { useApi } from "../data/useApi.js";
 export default function Music() {
   const albums = useApi("albums");
   const songs = useApi("songs");
+  const catalog = useApi("catalog");
   const [listenSong, setListenSong] = useState(null);
+  const [query, setQuery] = useState("");
+
+  const filtered = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    return q ? catalog.filter((t) => t.toLowerCase().includes(q)) : catalog;
+  }, [catalog, query]);
 
   return (
     <Page>
@@ -68,6 +75,45 @@ export default function Music() {
             </Reveal>
           ))}
         </div>
+      </section>
+
+      {/* Full catalogue with search */}
+      <section className="music section">
+        <Reveal className="section__head">
+          <h2>සම්පූර්ණ ගී එකතුව</h2>
+          <p className="section__sub">FULL CATALOGUE · {catalog.length} SONGS</p>
+        </Reveal>
+
+        <Reveal className="catalog-search">
+          <input
+            type="search"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="ගීතයක් සොයන්න · SEARCH A SONG…"
+            aria-label="Search songs"
+          />
+        </Reveal>
+
+        <div className="catalog">
+          {filtered.map((title, i) => (
+            <button
+              key={title + i}
+              className="catalog__item"
+              onClick={() => setListenSong({ titleSi: title, titleEn: title })}
+            >
+              <b>{String(i + 1).padStart(3, "0")}</b>
+              <span>{title}</span>
+              <i />
+            </button>
+          ))}
+          {filtered.length === 0 && (
+            <p className="catalog__empty">
+              "{query}" — කිසිවක් හමු වුණේ නැහැ · NO MATCHES
+            </p>
+          )}
+        </div>
+
+        <p className="catalog__credit">CATALOGUE VIA SARIGAMA.LK</p>
       </section>
 
       <ListenModal song={listenSong} onClose={() => setListenSong(null)} />
