@@ -174,28 +174,29 @@ export default function Home() {
           </Reveal>
           <Reveal delay={0.2}>
             <p className="bio__body">
-              1945 දී උපත ලද ගුණදාස කපුගේ, ශ්‍රී ලංකා ගුවන්විදුලි සංස්ථාවේ සංගීත
-              අධ්‍යක්ෂවරයෙකු ලෙස දශක ගණනාවක් සේවය කළේය. ගැමි ජනතාවගේ දුක්
-              කම්කටොලු සිය ගීතවලට පණ පෙවූ ඔහුගේ "කම්පන" ප්‍රසංග මාලාව ලාංකීය
-              වේදිකා ඉතිහාසයේ සුවිශේෂී සන්ධිස්ථානයක් විය.
+              1945 අගෝස්තු 7 වැනිදා ඇල්පිටියේ තණබද්දේගම ගම්මානයේ උපත ලද
+              ගුණදාස කපුගේ, 1960 සිට ශ්‍රී ලංකා ගුවන්විදුලි සංස්ථාවේ සේවය කරමින්
+              ඉන්දියාවේ භාත්කණ්ඩේ සංගීත ආයතනයේ ශාස්ත්‍රීය පුහුණුව ලැබීය. ගැමි
+              ජනතාවගේ දුක් කම්කටොලු සිය ගීතවලට පණ පෙවූ ඔහුගේ "කම්පන" තනි
+              පුද්ගල ප්‍රසංගය ලාංකීය වේදිකා ඉතිහාසයේ සුවිශේෂී සන්ධිස්ථානයක් විය.
             </p>
           </Reveal>
           <Reveal delay={0.25}>
             <div className="bio__stats">
               <div className="stat">
-                <b className="stat__big stat__big--num">40+</b>
+                <b className="stat__big stat__big--num">40</b>
                 <span className="si">වසරක සංගීත දිවිය</span>
-                <span className="en">YEARS IN MUSIC</span>
+                <span className="en">1963 — 2003 · YEARS IN MUSIC</span>
               </div>
               <div className="stat">
-                <b className="stat__big stat__big--num">100+</b>
-                <span className="si">අමරණීය ගීත</span>
-                <span className="en">TIMELESS SONGS</span>
+                <b className="stat__big stat__big--num">1000+</b>
+                <span className="si">කම්පන ප්‍රසංග</span>
+                <span className="en">KAMPANA PERFORMANCES</span>
               </div>
               <div className="stat">
-                <b className="stat__big">කම්පන</b>
-                <span className="si">ප්‍රසංග මාලාව</span>
-                <span className="en">LANDMARK CONCERTS</span>
+                <b className="stat__big stat__big--num">10+</b>
+                <span className="si">ජාතික සම්මාන</span>
+                <span className="en">NATIONAL AWARDS · 1996–99</span>
               </div>
             </div>
           </Reveal>
@@ -233,7 +234,7 @@ export default function Home() {
           <p className="section__sub">THE MUSIC · ALBUMS &amp; LIVE RECORDINGS</p>
         </Reveal>
         <div className="music__row">
-          {albums.map((a, i) => (
+          {albums.slice(0, 4).map((a, i) => (
             <Reveal key={a.slug} delay={i * 0.1}>
               <motion.article
                 className="album"
@@ -278,7 +279,7 @@ export default function Home() {
         <div className="kampana__content">
           <Reveal><h2>කම්පන</h2></Reveal>
           <Reveal delay={0.1}>
-            <p className="kampana__en">KAMPANA — THE CONCERT THAT SHOOK A NATION</p>
+            <p className="kampana__en">PREMIERED AUG 25, 1990 · LUMBINI THEATRE · 1000+ SHOWS</p>
           </Reveal>
           <Reveal delay={0.15}>
             <p className="kampana__si">වේදිකාව මත තනිවම — ගිටාරය, හඬ, සත්‍යය.</p>

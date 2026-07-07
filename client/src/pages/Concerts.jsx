@@ -35,7 +35,7 @@ export default function Concerts() {
         <div className="kampana__content">
           <Reveal><h2>කම්පන</h2></Reveal>
           <Reveal delay={0.1}>
-            <p className="kampana__en">THE CONCERT THAT SHOOK A NATION</p>
+            <p className="kampana__en">PREMIERED AUG 25, 1990 · LUMBINI THEATRE · 1000+ SHOWS</p>
           </Reveal>
           <Reveal delay={0.15}>
             <p className="kampana__si">වේදිකාව මත තනිවම — ගිටාරය, හඬ, සත්‍යය.</p>

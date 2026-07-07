@@ -421,7 +421,8 @@ button { font-family: inherit; cursor: pointer; }
 .timeline__track {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  /* auto-fit so the track holds any number of milestones */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   list-style: none;
   max-width: 1200px;
   margin: 0 auto;
