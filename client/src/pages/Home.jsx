@@ -60,10 +60,6 @@ export default function Home() {
           transition={{ duration: 1.4, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
         >
           {/* Replace with: <img src="/images/kapuge-portrait.jpg" alt="ගුණදාස කපුගේ" /> */}
-          <figcaption>
-            <span className="si">සේපියා ඡායාරූපය</span>
-            <span className="en">SEPIA PORTRAIT HERE</span>
-          </figcaption>
         </motion.figure>
 
         <motion.div
